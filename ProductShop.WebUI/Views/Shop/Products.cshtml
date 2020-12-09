@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ProductShop.WebUI.Integrations.ProductShop.Api.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="body_scroll">
+  
+    <div class="container-fluid">
+        <div class="row clearfix">
+            @foreach (var item in Model)
+            {
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+
+                    <div class="card">
+                        <div class="body product_item">
+                            <span class="label onsale">Sale!</span>
+                            <img src="https://localhost:44324/Uploads/@(item.Image)" alt="@item.Name" class="img-fluid cp_img" />
+                            <div class="product_details">
+                                <a href="ec-product-detail.html">@item.Name.</a>
+                                <ul class="product_price list-unstyled">
+                                    <li class="old_price">$@item.Amount</li>
+                                    <li class="new_price">$@item.Amount</li>
+                                </ul>
+                            </div>
+                            <div class="action">
+                                <a href="javascript:void(0);" class="btn btn-info waves-effect"><i class="zmdi zmdi-eye"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-primary waves-effect">ADD TO CART</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

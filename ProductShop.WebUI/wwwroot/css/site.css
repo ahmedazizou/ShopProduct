@@ -1,0 +1,150 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/* Underline Effect*/
+/*.brand {
+    transform: translateX(-50%) !important;
+    left: 50% !important;
+    position: absolute !important;
+    top:0px;*/
+   /* margin-top: -27px !important;*/
+/*}*/
+
+.card {
+background-color:white;
+
+}
+.card-header {
+background-color:white;
+}
+
+
+.content {
+margin-right:0 !important;
+}
+
+
+.product-header {
+    background:white !important;
+    padding:12px;
+    border-radius:5px;
+
+}
+
+.navv {
+    top: 12px;
+    box-shadow: none;
+    border-top: 1px solid #E5E7E9;
+    border-bottom: 1px solid #E5E7E9;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+}
+
+.nav-item {
+    position: relative;
+    color: black;
+}
+
+.nav-link {
+    color:black !important;
+
+}
+.navbar-brand {
+color:black !important;
+}
+
+.navbar-collapse ul li a.nav-link:before {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+    content: '';
+    opacity: 0;
+    -ms-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -ms-transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.navbar-collapse ul li:hover a.nav-link:before {
+    opacity: 1;
+    -ms-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    bottom: 0px;
+    background: #1b6ec2;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #dd4343;
+}
+
+.dropdown-menu {
+    border: 0px;
+}
+
+
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff !important;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 10px; /* Vertically center the text there */
+}

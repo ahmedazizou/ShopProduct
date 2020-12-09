@@ -1,0 +1,104 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProductShop.WebUI</title>
+
+    <link rel="stylesheet" href="~/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="~/assets/css/style.min.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <style>
+        .navbar {
+            position: relative;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+
+        <center>
+
+            <img class="img-fluid mt-1 ml-4" src="~/itsdeal_logo.png" width="120" height="60" />
+
+        </center>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navv">
+            <a class="navbar-brand ml-3" href="#"><strong>ProductShop</strong></a>
+            <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mr-4">
+
+                    @if (Context.Session.GetInt32("UserId") > 0)
+                    {
+                        <li class="nav-item ">
+
+                            <a class="btn btn-outline-info mr-2">@Context.Session.GetString("FullName")</a>
+
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="btn btn-danger mr-2" href="@Url.Action("Logoff","Account")">Logoff</a>
+
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item ">
+                            <a class="btn btn-primary mr-2" href="@Url.Action("Login","Account")">Login</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="@Url.Action("Register","Account")">Registration</a>
+                        </li>
+
+                    }
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container ">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - ProductShop.WebUI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!--<script src="~/assets/bundles/libscripts.bundle.js"></script>--> <!-- Lib Scripts Plugin Js -->
+    <!--<script src="~/assets/bundles/vendorscripts.bundle.js"></script>--> <!-- Lib Scripts Plugin Js -->
+    <!--<script src="~/assets/bundles/mainscripts.bundle.js"></script>--><!-- Custom Js -->
+
+    <script>
+        $(document).ready(function () {
+            $('#navbarDropdown').mouseenter(function () {
+                $('.dropdown-menu').slideToggle(300, "linear");
+            });
+
+            $('.dropdown-menu').mouseleave(function () {
+                $(this).slideToggle(300, "linear");
+            });
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

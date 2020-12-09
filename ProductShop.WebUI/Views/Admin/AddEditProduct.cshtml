@@ -1,0 +1,92 @@
+﻿@model ProductShop.WebUI.Integrations.ProductShop.Api.Models.Product
+
+@{
+    ViewData["Title"] = "AddEditProduct";
+   Layout = "~/Views/Shared/_Admin_Layout.cshtml";
+
+}
+
+
+
+
+<div class="block-header ">
+    <div class="card mb-0">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <h2>Add List</h2>
+                    <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
+                </div>
+                <div class="col-sm-6">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container-fluid pt-0">
+    <form asp-action="AddEditProduct" enctype="multipart/form-data" method="post" >
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="row clearfix form-group pt-3">
+                    <div class="col-md-6">
+                        <span>Image</span>
+                        <input type="file" asp-for="Image" class="form-control" />
+                        <span asp-validation-for="Image" class="text-danger"></span>
+
+                    </div>
+                    <div class="col-md-6">
+                        <span>Product Name</span>
+                        <input type="text" asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row clearfix form-group">
+                    <div class="col-md-6">
+                        <span>Stock</span>
+                        <input type="text" asp-for="Stock" class="form-control" />
+                        <span asp-validation-for="Stock" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <span>Amount</span>
+                        <input type="text" asp-for="Amount" class="form-control" />
+                        <span asp-validation-for="Amount" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row clearfix form-group">
+
+                    <div class="col-md-12">
+                        <span>Detail</span>
+                        <textarea class="form-control" asp-for="Detail" rows="4">
+                   </textarea>
+                        <span asp-validation-for="Detail" class="text-danger"></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="row clearfix">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary float-right">Update</button>
+                        <input type="text" asp-for="Id" hidden class="form-control" value="@Model.Id" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+   
+
+   
+</div>

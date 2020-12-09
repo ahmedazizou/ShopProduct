@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductShop.WebUI", "ProductShop.WebUI\ProductShop.WebUI.csproj", "{8132258C-4582-4814-BFEC-9505DE981A07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductShop.API", "ProductShop.API\ProductShop.API.csproj", "{4094C88B-F573-411B-84E2-7CB436D9D133}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8132258C-4582-4814-BFEC-9505DE981A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8132258C-4582-4814-BFEC-9505DE981A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8132258C-4582-4814-BFEC-9505DE981A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8132258C-4582-4814-BFEC-9505DE981A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4094C88B-F573-411B-84E2-7CB436D9D133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4094C88B-F573-411B-84E2-7CB436D9D133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4094C88B-F573-411B-84E2-7CB436D9D133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4094C88B-F573-411B-84E2-7CB436D9D133}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85A12A38-840C-40BF-8066-3AF3D37DB38A}
+	EndGlobalSection
+EndGlobal

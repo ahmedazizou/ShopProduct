@@ -1,0 +1,121 @@
+﻿@model ProductShop.WebUI.Integrations.ProductShopApi.Models.User
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Admin_Layout.cshtml";
+}
+
+<div class="block-header">
+    <div class="card mb-0">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-sm-12">
+                    <h2>Register</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid">
+
+    <form asp-action="RegisterUserAdmin" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="row form-group clearfix">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">First Name:</label>
+                            <input type="text" asp-for="FirstName" class="form-control bg" required placeholder="Enter first name">
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Last Name:</label>
+                            <input type="text" asp-for="LastName" class="form-control bg" required placeholder="Enter last name">
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-group clearfix">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address:</label>
+                            <input type="email" asp-for="Email" class="form-control bg" required placeholder="Enter email">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-group clearfix">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password:</label>
+                            <input type="password" asp-for="Password" class="form-control bg" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Confirm Password:</label>
+                            <input type="password" asp-for="ConfirmPassword" class="form-control bg" placeholder="Confirm Password" value="@Model.Password">
+                            <span asp-validation-for="ConfirmPassword"  class="text-danger"></span>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="row clearfix">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary float-right">Save</button>
+                        <input type="text" asp-for="Id" value="@Model.Id" hidden class="form-control bg" />
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*<div class="form-group">
+            <label for="exampleInputEmail1">First Name:</label>
+            <input type="text" asp-for="FirstName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter first name">
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Last Name:</label>
+            <input type="text" asp-for="LastName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter last name">
+            <span asp-validation-for="LastName" class="text-danger"></span>
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address:</label>
+            <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password:</label>
+            <input type="password" asp-for="Password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Confirm Password:</label>
+            <input type="password" asp-for="ConfirmPassword" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>*@
+    </form>
+</div>
+
+    
