@@ -48,7 +48,7 @@ namespace ProductShop.WebUI.Controllers
             {
                
 
-                var products = await ProductService.GetAllProducts();
+                var products = await ProductService.Get();
                 return View("Products", products);
             }else
             {
@@ -132,7 +132,7 @@ namespace ProductShop.WebUI.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var res = await ProductService.DeleteProduct(id);
-            var products = await ProductService.GetAllProducts();
+            var products = await ProductService.Get();
 
             if (res.IsSuccessStatusCode)
             {

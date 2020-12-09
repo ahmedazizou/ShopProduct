@@ -14,7 +14,7 @@ namespace ProductShop.WebUI.Controllers
         {
             if (HttpContext.Session.GetInt32("UserId")>0)
             {
-                var products = await ProductService.GetAllProducts();
+                var products = await ProductService.Get();
                 return View(products);
             }
             else
